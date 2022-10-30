@@ -1,10 +1,10 @@
 ---
 marp: true
-theme: semib
+theme: semi
 paginate: true
 math: katex
-size: 16:9
-# size: 4:3
+# size: 16:9
+size: 4:3
 ---
 
 <!-- _class: lead -->

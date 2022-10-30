@@ -143,9 +143,7 @@ section {
   line-height: 1.55;
   /* background-image: none; */
   font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px 1.8em 0;
   font-size: 28px;
 
   letter-spacing: 1.25px;
@@ -259,6 +257,17 @@ section.hh {
 
 section.hh > h1 {
   border-bottom: none;
+  font-size: 38px;
+  padding-top: 0.3em;
+}
+section.hh > h2{
+  font-size: 35px;
+}
+section.hh > h3{
+  font-size: 32px;
+}
+section.hh > h4{
+  font-size: 30px;
 }
 
 section.hh > header {
