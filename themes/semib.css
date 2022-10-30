@@ -23,8 +23,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   margin: 0.5em 0 0.3em;
   color: #000;
 }
@@ -32,17 +31,16 @@ h1 strong,
 h2 strong,
 h3 strong,
 h4 strong,
-h5 strong,
-h6 strong {
+h5 strong {
   font-weight: inherit;
   color: #000;
 }
+
 h1::part(auto-scaling),
 h2::part(auto-scaling),
 h3::part(auto-scaling),
 h4::part(auto-scaling),
-h5::part(auto-scaling),
-h6::part(auto-scaling) {
+h5::part(auto-scaling) {
   max-height: 580px;
 }
 
@@ -61,9 +59,6 @@ h4{
 }
 h5{
   font-size: 32px;
-}
-h6 {
-  font-size: 30px;
 }
 
 ul > li,
@@ -128,6 +123,7 @@ table {
   margin: 1em 0 0;
   font-size: 28px;
 }
+
 table th,
 table td {
   padding: 5px 5px;
@@ -168,8 +164,7 @@ section h1 strong,
 section h2 strong,
 section h3 strong,
 section h4 strong,
-section h5 strong,
-section h6 strong {
+section h5 strong {
   color: var(--color-highlight);
 }
 section pre > code {
@@ -197,6 +192,7 @@ section.hhh table thead th {
   background: #f6f8fa;
   color: var(--color-foreground);
   font-weight: 200;
+  text-align: left;
 }
 
 section table tbody > tr:nth-child(odd) td,
@@ -217,8 +213,7 @@ section:where(.lead) h1,
 section:where(.lead) h2,
 section:where(.lead) h3,
 section:where(.lead) h4,
-section:where(.lead) h5,
-section:where(.lead) h6 {
+section:where(.lead) h5 {
   text-align: center;
 }
 section:where(.lead) p {
@@ -229,7 +224,6 @@ section:where(.lead) blockquote > h2,
 section:where(.lead) blockquote > h3,
 section:where(.lead) blockquote > h4,
 section:where(.lead) blockquote > h5,
-section:where(.lead) blockquote > h6,
 section:where(.lead) blockquote > p {
   text-align: left;
 }
@@ -261,29 +255,36 @@ footer {
   position: fixed;
 }
 
+section.withheaderh,
 section.withheader {
   padding-top: 60px;
 }
 
+section.hhh,
 section.hh {
   padding-top: 120px;
 }
 
+section.hhh > h1,
 section.hh > h1 {
   border-bottom: none;
   font-size: 38px;
   padding-top: 0.3em;
 }
+section.hhh > h2,
 section.hh > h2{
   font-size: 35px;
 }
+section.hhh > h3,
 section.hh > h3{
   font-size: 32px;
 }
+section.hhh > h4,
 section.hh > h4{
   font-size: 30px;
 }
 
+section.hhh > header,
 section.hh > header {
   font-size: 44px;
   /* width: calc(100vw - 115px); */
@@ -295,6 +296,7 @@ section.hh > header {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+section.hhh::after,
 section.hh::after {
   text-align: right;
   border-bottom:#6a7a7d solid 7px;

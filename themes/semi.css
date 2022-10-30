@@ -192,7 +192,9 @@ section.hhh table thead th {
   background: #f6f8fa;
   color: var(--color-foreground);
   font-weight: 200;
+  text-align: left;
 }
+
 section table tbody > tr:nth-child(odd) td,
 section table tbody > tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);
@@ -255,29 +257,36 @@ footer {
   position: fixed;
 }
 
+section.withheaderh,
 section.withheader {
   padding-top: 70px;
 }
 
+section.hhh,
 section.hh {
   padding-top: 110px;
 }
 
+section.hhh > h1,
 section.hh > h1 {
   border-bottom: none;
   font-size: 38px;
   padding-top: 0.3em;
 }
+section.hhh > h2,
 section.hh > h2{
   font-size: 35px;
 }
+section.hhh > h3,
 section.hh > h3{
   font-size: 32px;
 }
+section.hhh > h4,
 section.hh > h4{
   font-size: 30px;
 }
 
+section.hhh > header,
 section.hh > header {
   font-size: 44px;
   /* width: calc(100vw - 115px); */
@@ -289,6 +298,7 @@ section.hh > header {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+section.hhh::after,
 section.hh::after {
   text-align: right;
   width: calc(100% - 70px);
