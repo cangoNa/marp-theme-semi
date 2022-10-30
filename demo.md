@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: academic
+theme: semib
 paginate: true
 math: katex
 # size: 16:9
@@ -8,72 +8,47 @@ size: 4:3
 ---
 
 <!-- _class: lead -->
+<!-- _footer: yy/mm/dd <br> ○○研究室 -->
 
-# Marpで研究室の発表スライドを作る
-
-#### 〜Beamerを卒業しよう〜
+# Marpでつくるゼミ用発表スライド
 
 <br>
+<br>
 
-**著者 太郎**
-ほげほげ研究室 M2
-
-##### YYYY/MM/DD
+**作成者**
+所属
 
 ---
 
 <!-- _header: 見出しがどんどんながくなるながくなる -->
+<!-- footer:  ○○研究室 -->
 <!-- _class: hh -->
 
-# 見出し
+# ヘッダをタイトルにできる
 
-1. はじめに
-1. コードブロック
-1. 数式
-1. 図
+1. ナンバリングありの箇条書き
+1. こんな感じ
+1. ヘッダが折り返されると本文と被る
+1. 右に画像を貼ってもボーダーが途切れないけど、タイトルは乱れる
+1. 実際に画像を貼りたいなら、白を貼り付けて領域確保 → スライドソフトを開いて自分で貼る
 
-![bg right:20% contain](./images/kenkyu_woman_seikou.png)
+![bg right:20% contain](./images/black.png)
 
 ---
 
-<!-- _footer: はじめに -->
-<!-- _header: はじめに -->
+<!-- _header: ヘッダありでタイトルは h1 -->
 <!-- _class: withheader -->
 # タイトルもどんどんながくなるながくなるながくなる
 
+- 本文箇条書きはこんな感じ
+  - 入れ子はこんな感じ
+- 脚注は academic$[1]$ を参考に
+- 画像がないなら h1 を見出しにすることを推奨
 
-- Marp とは **Markdown** で**スライド**を作成するためのソフトウェアである。
-  - 基本的な Markdown のシンタックスがサポートされている。
-- Markdown 上で `---` という区切り線を入れるだけで、次のページに移動することができる。$^1$
-
-> 1: Marp は CommonMark という Markdown の仕様に沿って開発されているため、CommonMark に含まれていない「脚注」の文法（`[^1]` を使うもの）が提供されていない。そこで、https://github.com/marp-team/marp/discussions/150#discussioncomment-1302384 を参照して擬似的に脚注を実現した。
-
----
-
-<!-- _header: コードブロック -->
-# テスト
-
-```python
-import torch
-print(torch.cuda.is_available())
-```
-
-こんな感じでコードブロックを書くことができる。
-
-```python
-# comment
-from transformers import AutoModelForMaskedLM, AutoTokenizer
-model = AutoModelForMaskedLM.from_pretrained("cl-tohoku/bert-base-japanese-whole-word-masking")
-tokenizer = AutoTokenizer.from_pretrained("cl-tohoku/bert-base-japanese-whole-word-masking")
-
-inputs = tokenizer.encode_plus("私はとても[MASK]です。", return_tensors='pt')
-outputs = model(**inputs)
-tokenizer.convert_ids_to_tokens(outputs.logits[0][1:-1].argmax(axis=-1))
-```
-
-横幅は自動調整される（ドキュメントの[Auto-scaling](https://github.com/marp-team/marp-core#auto-scaling-features)を参照）。
+> ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より
 
 ---
+- シンタックスハイライト
 
 ```c
 #include <stdio.h>
@@ -83,43 +58,14 @@ int main(){
 }
 ```
 
+- diff もできる
+
 ```diff
-# include <stdio.h>
 int main(){
 -   printf("hello world\n");
 +   puts("hello world"); 
-    return 0;
-}
 ```
 
+- これはインライン
+
 `test`
-
----
-
-<!-- _header: 数式 -->
-<!-- _footer: あいうえおかきくけこ -->
-
-$$ I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx $$
-
-$$
-f(x) = \int_{-\infty}^\infty
-    \hat f(\xi)\,e^{2 \pi i \xi x}
-    \,d\xi
-$$
-
-こんな感じで数式を書くことができる。もちろんインラインの $\LaTeX$ も使える。  
-ついでに絵文字も使える:smile:
-
-|1|2|
-|---|---|
-|表|要素|
-
----
-
-<!-- _header: 図 -->
-<!-- _footer: あいうえおかきくけこさしすせそ -->
-
-1. まず[このいらすとやのリンク](https://www.irasutoya.com/2018/10/blog-post_723.html)から画像（`kenkyu_woman_seikou.png`）を右クリックでダウンロードしてください。
-2. この Markdown のあるディレクトリの中に `images` という名前のディレクトリを作り、先ほどダウンロードした画像を配置してください。これで準備が整いました。
-
-![bg right](./images/kenkyu_woman_seikou.png)
