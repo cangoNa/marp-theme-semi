@@ -185,6 +185,14 @@ section table thead th {
   background: var(--color-background);
   color: var(--color-foreground);
 }
+
+section.h table thead th,
+section.withheaderh table thead th,
+section.hhh table thead th {
+  background: #f6f8fa;
+  color: var(--color-foreground);
+  font-weight: 200;
+}
 section table tbody > tr:nth-child(odd) td,
 section table tbody > tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);

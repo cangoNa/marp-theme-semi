@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semi
+theme: semib
 paginate: true
 math: katex
 # size: 16:9
@@ -49,6 +49,8 @@ size: 4:3
 - 脚注は academic$[1]$ を参考に
 - 画像がないなら h1 を見出しにすることを推奨
 
+![w:100px h:100px left](./images/black.png)
+
 > ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より
 
 ---
@@ -78,3 +80,10 @@ int main(){
 <!-- _class: withheader -->
 
 - ヘッダありで見出しなしの時、本文が上に行き過ぎる問題をなんとかしないといけない。とくに16:9 の時とかページ番号に直撃する
+
+|a|A|
+|---|---|
+|a|b|
+|c|d|
+|e|f|
+|g|h|
