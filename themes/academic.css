@@ -1,0 +1,403 @@
+/* @theme academic
+ * @auto-scaling false
+*/ 
+
+/* 
+ * style:
+ *  mainly followed: gaia
+ *   "https://github.com/marp-team/marp-core/blob/main/themes/gaia.scss"
+ * followed: academic
+ *  "https://github.com/kaisugi/marp-theme-academic"
+
+ * color:
+ *  mainly followed: default
+ *   "https://github.com/marp-team/marp-core/blob/main/themes/default.scss" 
+ */
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import '~highlight.js/styles/sunburst';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0.3em;
+  color: #000;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: inherit;
+  color: #000;
+}
+h1::part(auto-scaling),
+h2::part(auto-scaling),
+h3::part(auto-scaling),
+h4::part(auto-scaling),
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
+  max-height: 580px;
+}
+
+h1{
+  font-size: 44px;
+  border-bottom:#6a7a7d solid 7px;
+}
+h2{
+  font-size: 41px
+}
+h3{
+  font-size: 38px;
+}
+h4{
+  font-size: 35px;
+}
+h5{
+  font-size: 32px;
+}
+h6 {
+  font-size: 0.9em;
+}
+
+ul > li,
+ol > li {
+  margin: 0.3em 0 0;
+}
+ul > li > p,
+ol > li > p {
+  margin: 0.6em 0 0;
+}
+
+code {
+  display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 24px;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
+  line-height: 1.3;
+  overflow: visible;
+  border: solid;
+}
+
+pre {
+  display: block;
+  overflow: visible;
+  margin: 5px 1px;
+  border: solid;
+}
+pre::part(auto-scaling) {
+  max-height: calc(580px - 1em);
+}
+
+blockquote {
+  padding: 0 1em;
+  max-width: 100%;
+  font-size: 24px;
+  position: absolute;
+  margin-top: 5px;
+  bottom: 60px;
+  line-height: 1.3;
+}
+blockquote::after, blockquote::before {
+  content: "";
+  display: block;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  position: absolute;
+}
+blockquote > *:first-child {
+  margin-top: 0;
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0 0;
+  font-size: 28px;
+}
+table th,
+table td {
+  padding: 5px 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+section {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
+  display: block;
+
+  line-height: 1.55;
+  /* background-image: none; */
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 28px;
+
+  letter-spacing: 1.25px;
+  word-wrap: break-word;
+  --color-background: #fff;
+  --color-background-stripe: rgba(69, 90, 100, 0.1);
+  --color-foreground: #000;
+  --color-dimmed: #6a7a7d;
+  --color-highlight: #800000;
+  /* --color-highlight: blue; */
+}
+section a,
+section mark {
+  color: var(--color-highlight);
+}
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+  color: var(--color-highlight);
+}
+section pre > code {
+  background: transparent;
+}
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+  color: var(--color-foreground);
+}
+section table th,
+section table td {
+  border-color: var(--color-foreground);
+}
+section table thead th {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+section table tbody > tr:nth-child(odd) td,
+section table tbody > tr:nth-child(odd) th {
+  background: var(--color-background-stripe, transparent);
+}
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+section:where(.lead) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  /* stylelint-disable-next-line no-descending-specificity */
+}
+section:where(.lead) h1,
+section:where(.lead) h2,
+section:where(.lead) h3,
+section:where(.lead) h4,
+section:where(.lead) h5,
+section:where(.lead) h6 {
+  text-align: center;
+}
+section:where(.lead) p {
+  text-align: center;
+}
+section:where(.lead) blockquote > h1,
+section:where(.lead) blockquote > h2,
+section:where(.lead) blockquote > h3,
+section:where(.lead) blockquote > h4,
+section:where(.lead) blockquote > h5,
+section:where(.lead) blockquote > h6,
+section:where(.lead) blockquote > p {
+  text-align: left;
+}
+section:where(.lead) ul > li > p,
+section:where(.lead) ol > li > p {
+  text-align: left;
+}
+section:where(.lead) table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  position: fixed;
+}
+
+footer {
+  font-size: 24px;
+  text-align: left;
+  /* align-items: center; */
+  /* width: 100vw; */
+  margin-top: 3px;
+  font-weight: 700;
+  position: fixed;
+}
+
+section.withheader {
+  padding-top: 70px;
+}
+
+section.hh {
+  padding-top: 110px;
+}
+
+section.hh > h1 {
+  border-bottom: none;
+}
+
+section.hh > header {
+  font-size: 44px;
+  /* width: calc(100vw - 115px); */
+  /* border-bottom:#6a7a7d solid 7px; */
+  margin: 0.5em 0.2em 0.3em;
+  top: 40px;
+  padding-right: 40px;
+  line-height: 1.55;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+section.hh::after {
+  text-align: right;
+  border-bottom:#6a7a7d solid 7px;
+  width: calc(100% - 70px);
+}
+
+/* https://github.com/marp-team/marpit/issues/271 */
+section::after {
+  top: 40px;
+  font-weight: 700;
+  font-size: 44px;
+  color:#000;
+  content: attr(data-marpit-pagination);
+  /* content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total); */
+}
+
+ul ul {
+  font-size: 0.9em;
+}
+
+section.lead h1 {
+  color: #000;
+  text-align: center;
+  font-size: 54px;
+}
+section.lead h1 strong {
+  -webkit-text-stroke: 1px #000;
+}
+section.lead h2 {
+  color: #000;
+  text-align: center;
+}
+section.lead h2 strong {
+  -webkit-text-stroke: 1px #000;
+}
+section.lead h3 {
+  color: #000;
+  text-align: center;
+}
+section.lead h3 strong {
+  -webkit-text-stroke: 1px #000;
+}
+section.lead h4 {
+  color: #000;
+  text-align: center;
+}
+section.lead h4 strong {
+  -webkit-text-stroke: 1px #000;
+}
+section.lead h5 {
+  color: #000;
+  font-size: 24px;;
+  text-align: center;
+}
+section.lead h5 strong {
+  -webkit-text-stroke: 1px #000;
+}
+section.lead p {
+  text-align: center;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0px;
+}
+
+blockquote > code,
+pre > code {
+  line-height: 1.3;
+  font-size:24px;
+  overflow: visible;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 100%;
+}
+
+
+/* 
+gaia, default のライセンス
+
+MIT License
+
+Copyright (c) 2018 Marp team (marp-team@marp.app)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
+
+
+/* 
+academic のライセンス
+
+MIT License
+
+Copyright (c) 2022 Kaito Sugimoto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
