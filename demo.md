@@ -3,8 +3,8 @@ marp: true
 theme: semib
 paginate: true
 math: katex
-# size: 16:9
-size: 4:3
+size: 16:9
+# size: 4:3
 ---
 
 <!-- _class: lead -->
@@ -26,6 +26,8 @@ size: 4:3
 
 # ヘッダをタイトルにできる
 
+普通にテキスト
+
 1. ナンバリングありの箇条書き
 1. こんな感じ
 1. ヘッダが折り返されると本文と被る
@@ -38,7 +40,7 @@ size: 4:3
 
 <!-- _header: ヘッダありでタイトルは h1 -->
 <!-- _class: withheader -->
-# タイトルもどんどんながくなるながくなるながくなる
+# こちらもどんどんながくなるながくなるながくなるながくなるながくなるながくなる
 
 - 本文箇条書きはこんな感じ
   - 入れ子はこんな感じ
@@ -48,6 +50,7 @@ size: 4:3
 > ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より
 
 ---
+
 - シンタックスハイライト
 
 ```c
