@@ -66,6 +66,4 @@ int main(){
 +   puts("hello world"); 
 ```
 
-- これはインライン
-
-`test`
+- これはインライン → `test`
