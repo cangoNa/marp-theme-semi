@@ -63,7 +63,7 @@ h5{
   font-size: 32px;
 }
 h6 {
-  font-size: 0.9em;
+  font-size: 30px;
 }
 
 ul > li,
@@ -144,7 +144,8 @@ section {
   line-height: 1.55;
   /* background-image: none; */
   font-family: 'Noto Sans JP', sans-serif;
-  padding: 40px 1.3em 0;
+  padding: 40px 1.8em 0;
+  /* margin: 0.5em 0 0.3em; */
   /* padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px; */
@@ -252,15 +253,26 @@ footer {
 }
 
 section.withheader {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 section.hh {
-  padding-top: 110px;
+  padding-top: 120px;
 }
 
 section.hh > h1 {
   border-bottom: none;
+  font-size: 38px;
+  padding-top: 0.3em;
+}
+section.hh > h2{
+  font-size: 35px;
+}
+section.hh > h3{
+  font-size: 32px;
+}
+section.hh > h4{
+  font-size: 30px;
 }
 
 section.hh > header {
