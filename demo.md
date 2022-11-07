@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semi
+theme: semib
 paginate: true
 math: katex
 # size: 16:9

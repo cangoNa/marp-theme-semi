@@ -106,7 +106,7 @@ pre::part(auto-scaling) {
 }
 
 blockquote {
-  padding: 0 1em;
+  padding: 0 0.5em;
   max-width: 100%;
   font-size: 24px;
   position: absolute;
@@ -114,6 +114,15 @@ blockquote {
   bottom: 60px;
   line-height: 1.3;
 }
+
+section:where(.lead) blockquote {
+  bottom: 90px;
+}
+
+section.lead blockquote > p{
+  text-align: left;
+}
+
 blockquote::after, blockquote::before {
   content: "";
   display: block;
