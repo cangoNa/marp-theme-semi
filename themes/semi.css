@@ -47,22 +47,29 @@ h6::part(auto-scaling) {
 }
 
 h1{
-  font-size: 44px;
+  font-size: 1.57em;
+  border-bottom:#6a7a7d solid 7px;
 }
 h2{
-  font-size: 41px
+  font-size: 1.46em;
 }
 h3{
-  font-size: 38px;
+  font-size: 1.35em;
 }
 h4{
-  font-size: 35px;
+  font-size: 1.25em;
 }
 h5{
-  font-size: 32px;
+  font-size: 1.14em;
 }
 h6 {
-  font-size: 0.9em;
+  font-size: 1em;
+  text-align: center;
+  border: solid;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
 }
 
 ul > li,
@@ -270,20 +277,20 @@ section.hh {
 section.hhh > h1,
 section.hh > h1 {
   border-bottom: none;
-  font-size: 38px;
+  font-size: 1.35em;
   padding-top: 0.3em;
 }
 section.hhh > h2,
 section.hh > h2{
-  font-size: 35px;
+  font-size: 1.25em;
 }
 section.hhh > h3,
 section.hh > h3{
-  font-size: 32px;
+  font-size: 1.14em;
 }
 section.hhh > h4,
 section.hh > h4{
-  font-size: 30px;
+  font-size: 1.07em;
 }
 
 section.hhh > header,
@@ -365,7 +372,7 @@ section.lead p {
 
 img[alt~="center"] {
   display: block;
-  margin: 0px;
+  margin: 0 auto;
 }
 
 blockquote > code,

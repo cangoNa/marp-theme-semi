@@ -23,7 +23,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0.5em 0 0.3em;
   color: #000;
 }
@@ -31,7 +32,8 @@ h1 strong,
 h2 strong,
 h3 strong,
 h4 strong,
-h5 strong {
+h5 strong,
+h6 strong {
   font-weight: inherit;
   color: #000;
 }
@@ -40,25 +42,35 @@ h1::part(auto-scaling),
 h2::part(auto-scaling),
 h3::part(auto-scaling),
 h4::part(auto-scaling),
-h5::part(auto-scaling) {
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
   max-height: 580px;
 }
 
 h1{
-  font-size: 44px;
+  font-size: 1.57em;
   border-bottom:#6a7a7d solid 7px;
 }
 h2{
-  font-size: 41px
+  font-size: 1.46em;
 }
 h3{
-  font-size: 38px;
+  font-size: 1.35em;
 }
 h4{
-  font-size: 35px;
+  font-size: 1.25em;
 }
 h5{
-  font-size: 32px;
+  font-size: 1.14em;
+}
+h6 {
+  font-size: 1em;
+  text-align: center;
+  border: solid;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
 }
 
 ul > li,
@@ -213,7 +225,8 @@ section:where(.lead) h1,
 section:where(.lead) h2,
 section:where(.lead) h3,
 section:where(.lead) h4,
-section:where(.lead) h5 {
+section:where(.lead) h5,
+section:where(.lead) h6 {
   text-align: center;
 }
 section:where(.lead) p {
@@ -224,6 +237,7 @@ section:where(.lead) blockquote > h2,
 section:where(.lead) blockquote > h3,
 section:where(.lead) blockquote > h4,
 section:where(.lead) blockquote > h5,
+section:where(.lead) blockquote > h6,
 section:where(.lead) blockquote > p {
   text-align: left;
 }
@@ -268,20 +282,20 @@ section.hh {
 section.hhh > h1,
 section.hh > h1 {
   border-bottom: none;
-  font-size: 38px;
+  font-size: 1.35em;
   padding-top: 0.3em;
 }
 section.hhh > h2,
 section.hh > h2{
-  font-size: 35px;
+  font-size: 1.25em;
 }
 section.hhh > h3,
 section.hh > h3{
-  font-size: 32px;
+  font-size: 1.14em;
 }
 section.hhh > h4,
 section.hh > h4{
-  font-size: 30px;
+  font-size: 1.07em;
 }
 
 section.hhh > header,
@@ -365,6 +379,7 @@ section.lead p {
 
 img[alt~="center"] {
   display: block;
+  margin: 0 auto;
 }
 
 blockquote > code,

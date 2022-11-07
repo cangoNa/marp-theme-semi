@@ -55,6 +55,13 @@ size: 4:3
 
 ---
 
+# その他
+
+## &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\Downarrow$
+###### h6 は囲み線ありの中央ぞろえ！ <br> 矢印も荒業で中央寄せ
+
+---
+
 - シンタックスハイライト
 
 ```c
@@ -96,7 +103,7 @@ int main(){
 
 # キャプションをつけたい
 
-![w:100px h:100px left](./images/black.png "title")
+![w:100px center](./images/black.png)
 
 |表の横幅を広くしてもキャプションはうまく行ってほしい|A|
 |---|---|
