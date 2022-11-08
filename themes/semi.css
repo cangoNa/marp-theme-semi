@@ -402,7 +402,8 @@ img[alt~="left"] {
 
 img[alt~="right"] {
   display: block;
-  margin: 0 0 0 auto;
+  position: fixed;
+  right: 1.8em;
 }
 
 blockquote > code,
