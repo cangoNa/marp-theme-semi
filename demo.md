@@ -82,7 +82,8 @@ int main(){
 +   puts("hello world"); 
 ```
 
-- これはインライン → `test`
+- これはインライン → `test` 後ろも文字
+  - 入れ子インライン → `test`
 
 ---
 <!-- header: その他いろいろ -->
@@ -100,6 +101,9 @@ int main(){
 |aaaaa|b|
 |c|d|
 |e|f|
+
+- 文字
+- ![w:100px left](./images/black.png)
 
 - 文字がどんどんながくなるながくなるながくな
 

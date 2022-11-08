@@ -162,7 +162,8 @@ section {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
-  display: block;
+  display: inline-block;
+  /* display: flex; */
   text-align: center;
 
   line-height: 1.3;
@@ -392,6 +393,11 @@ section.lead p {
 img[alt~="center"] {
   display: block;
   margin: 0 auto;
+}
+
+img[alt~="left"] {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 blockquote > code,

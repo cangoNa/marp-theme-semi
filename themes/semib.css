@@ -399,6 +399,10 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
 
 blockquote > code,
 pre > code {
