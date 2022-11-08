@@ -403,7 +403,7 @@ img[alt~="left"] {
 img[alt~="right"] {
   display: block;
   position: fixed;
-  margin-top: -1em;
+  margin-top: -1.7em;
   right: 1.8em;
 }
 
