@@ -19,6 +19,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import '~highlight.js/styles/sunburst';
 
+p {
+  text-align: left;
+}
+
 h1,
 h2,
 h3,
@@ -27,6 +31,7 @@ h5,
 h6 {
   margin: 0.5em 0 0.3em;
   color: #000;
+  text-align: left;
 }
 h1 strong,
 h2 strong,
@@ -75,6 +80,7 @@ h6 {
 
 ul > li,
 ol > li {
+  text-align:left;
   margin: 0.3em 0 0;
 }
 ul > li > p,
@@ -139,9 +145,10 @@ mark {
 }
 
 table {
+  display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
-  margin: 1em 0 0;
+  margin: 0.5em 0.5em 0;
   font-size: 28px;
 }
 
@@ -157,6 +164,7 @@ section {
   color: var(--color-foreground);
   font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
   display: block;
+  text-align: center;
 
   line-height: 1.3;
   /* background-image: none; */
@@ -266,6 +274,7 @@ header {
   font-size: 28px;
   font-weight: 700;
   position: fixed;
+  text-align: left;
 }
 
 footer {
