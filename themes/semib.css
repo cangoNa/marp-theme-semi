@@ -399,9 +399,14 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
-img[alt~="center"] {
+img[alt~="left"] {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+img[alt~="right"] {
   display: block;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 }
 
 blockquote > code,

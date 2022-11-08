@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semib
+theme: semi
 paginate: true
 math: katex
 # size: 16:9
@@ -103,9 +103,11 @@ int main(){
 |e|f|
 
 - 文字
-- ![w:100px left](./images/black.png)
+- ここに文字 ![w:100px right](./images/black.png)
 
 - 文字がどんどんながくなるながくなるながくな
+
+![right w:100px](./images/black.png)
 
 ---
 <!-- header: 未解決 -->
