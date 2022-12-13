@@ -332,7 +332,7 @@ section.hh::after {
 
 /* https://github.com/marp-team/marpit/issues/271 */
 section::after {
-  top: 40px;
+  top: 21px;
   font-weight: 700;
   font-size: 30px;
   color:#000;

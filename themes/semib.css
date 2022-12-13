@@ -339,14 +339,14 @@ section.hh > header {
 section.hhh::after,
 section.hh::after {
   text-align: right;
-  padding-bottom: 1.0em;
+  padding-bottom: 1.4em;
   border-bottom:#6a7a7d solid 7px;
   width: calc(100% - 70px);
 }
 
 /* https://github.com/marp-team/marpit/issues/271 */
 section::after {
-  top: 40px;
+  top: 21px;
   font-weight: 700;
   font-size: 30px;
   color:#000;

@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semib
+theme: semi
 paginate: true
 math: katex
 # size: 16:9
@@ -9,6 +9,7 @@ size: 4:3
 
 <!-- _class: lead -->
 <!-- _footer: yy/mm/dd <br> ○○研究室 -->
+<!-- _paginate: false -->
 
 # Marpでつくる<br>ゼミ用発表スライド
 
@@ -47,11 +48,11 @@ size: 4:3
 - 本文箇条書きはこんな感じでどんどん長く書くとしっかり折り返しもできる
   - 入れ子はこんな感じ
     1. さらに入れ子
-- 脚注は academic$[1]$ を参考に
+- 脚注は academic$^{*1}$ を参考に
 - 画像がないなら h1 を見出しにすることを推奨
   1. 数字の入れ子
 
-> ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より
+> *1: ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より
 
 ---
 
@@ -115,7 +116,7 @@ int main(){
 
 # キャプションをつけたい
 
-![w:100px center](./images/black.png)
+![w:100px center](./images/black.png "fig:")
 
 |a|b|
 |---|---|
