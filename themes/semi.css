@@ -100,6 +100,7 @@ code {
 }
 
 pre {
+  text-align: left;
   display: block;
   overflow: visible;
   margin: 5px 1px;
