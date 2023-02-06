@@ -55,6 +55,7 @@ h6::part(auto-scaling) {
 h1{
   font-size: 1.57em;
   border-bottom:#6a7a7d solid 7px;
+  padding-bottom: 0.1em;
 }
 h2{
   font-size: 1.46em;
@@ -115,10 +116,10 @@ pre::part(auto-scaling) {
 blockquote {
   padding: 0 0.5em;
   max-width: 100%;
-  font-size: 21px;
+  font-size: 20px;
   position: absolute;
   margin-top: 5px;
-  bottom: 60px;
+  bottom: 55px;
   line-height: 1.2;
 }
 
@@ -134,7 +135,7 @@ blockquote > ul > li::before {
 }
 
 section:where(.lead) blockquote {
-  bottom: 90px;
+  bottom: 85px;
 }
 
 section.lead blockquote > p{
