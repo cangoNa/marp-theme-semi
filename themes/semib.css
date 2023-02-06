@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.5em 0 0.3em;
+  margin: 0.5em 0 0.1em;
   color: #000;
   text-align: left;
 }
@@ -54,6 +54,7 @@ h6::part(auto-scaling) {
 
 h1{
   font-size: 1.57em;
+  padding-bottom: 0.1em;
   border-bottom:#6a7a7d solid 7px;
 }
 h2{
@@ -115,7 +116,7 @@ pre::part(auto-scaling) {
 blockquote {
   padding: 0 0.5em;
   max-width: 100%;
-  font-size: 21px;
+  font-size: 20px;
   position: absolute;
   margin-top: 5px;
   bottom: 60px;
