@@ -3,8 +3,8 @@ marp: true
 theme: semib
 paginate: true
 math: katex
-size: 16:9
-# size: 4:3
+# size: 16:9
+size: 4:3
 ---
 
 <!-- _class: lead -->
@@ -93,6 +93,8 @@ int main(){
 - # 箇条書きにも h1 を適用できる
 - ## h2 でも
 - ##### **h5 でも可能で、もちろん強調も可能**
+
+> - 1&ensp;:  Hideki EIRAKU ：BitVisor/Code/Commit [92bf88]，SourceForge， 入手先 <https://sourceforge.net/p/bitvisor/code/ci/92bf883b3609c3a5de03c98a4d711d178a81e872/> (参照 2023-02-20) ．
 
 ---
 
