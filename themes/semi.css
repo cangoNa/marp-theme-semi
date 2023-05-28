@@ -92,18 +92,18 @@ code {
   font-size: 20px;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
-  padding: 0.1em 0.2em;
+  padding: 0.05em 0.2em;
   vertical-align: baseline;
   line-height: 1.2;
   overflow: visible;
-  border: solid;
+  border: solid 1.5px;
 }
 
 pre {
   text-align: left;
   display: block;
   overflow: visible;
-  margin: 5px 1px;
+  margin: -0.3em 0em;
   border: solid;
 }
 pre::part(auto-scaling) {
@@ -159,14 +159,14 @@ mark {
 
 table {
   display: inline-block;
-  margin: 0.5em 0.5em 0;
+  margin: 0.0em 0.3em 0;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 28px;
 }
 table th,
 table td {
-  padding: 5px 5px;
+  padding: 3px 3px;
   border-width: 1px;
   border-style: solid;
 }
@@ -203,7 +203,7 @@ section h5 strong,
 section h6 strong {
   color: var(--color-highlight);
 }
-section pre > code {
+code {
   background: transparent;
 }
 section header,
