@@ -103,7 +103,7 @@ pre {
   text-align: left;
   display: block;
   overflow: visible;
-  margin: -0.3em 0em;
+  margin: 0.1em 0em;
   border: solid;
 }
 pre::part(auto-scaling) {
@@ -178,12 +178,12 @@ section {
   display: inline-block;
   text-align: center;
 
-  line-height: 1.4;
+  line-height: 1.0;
   font-family: 'Noto Sans JP', sans-serif;
   padding: 40px 1.3em 0;
   font-size: 28px;
 
-  letter-spacing: 1.25px;
+  letter-spacing: 1.0px;
   word-wrap: break-word;
   --color-background: #fff;
   --color-background-stripe: rgba(69, 90, 100, 0.1);
@@ -289,6 +289,7 @@ footer {
   margin-top: 3px;
   font-weight: 700;
   position: fixed;
+  line-height: 1.3em;
 }
 
 section.withheaderTwH,
@@ -298,7 +299,7 @@ section.withheader {
 
 section.hhTwH,
 section.hh {
-  padding-top: 110px;
+  padding-top: 1.8em;
 }
 
 section.hhTwH > h1,
@@ -325,7 +326,7 @@ section.hh > header {
   margin: 0.5em 0.2em 0.3em;
   top: 40px;
   padding-right: 40px;
-  line-height: 1.55;
+  line-height: 1.3em;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -392,6 +393,7 @@ section.lead h5 strong {
 }
 section.lead p {
   text-align: center;
+  line-height: 1.2em;
 }
 
 img[alt~="center"] {
