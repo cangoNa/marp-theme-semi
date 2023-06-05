@@ -158,6 +158,10 @@ mark {
   background: transparent;
 }
 
+table:where(.mintable) {
+  font-size: 20px;
+}
+
 table {
   display: inline-block;
   border-spacing: 0;
@@ -231,9 +235,7 @@ section table thead th {
   color: var(--color-foreground);
 }
 
-section.TwH table thead th,
-section.withheaderTwH table thead th,
-section.hhTwH table thead th {
+section.TwH table thead th{
   background: #f6f8fa;
   color: var(--color-foreground);
   font-weight: 200;
@@ -301,36 +303,29 @@ footer {
   position: fixed;
 }
 
-section.withheaderTwH,
 section.withheader {
   padding-top: 60px;
 }
 
-section.hhTwH,
 section.hh {
   padding-top: 120px;
 }
 
-section.hhTwH > h1,
 section.hh > h1 {
   border-bottom: none;
   font-size: 1.35em;
   padding-top: 0.3em;
 }
-section.hhTwH > h2,
 section.hh > h2{
   font-size: 1.25em;
 }
-section.hhTwH > h3,
 section.hh > h3{
   font-size: 1.14em;
 }
-section.hhTwH > h4,
 section.hh > h4{
   font-size: 1.07em;
 }
 
-section.hhTwH > header,
 section.hh > header {
   font-size: 44px;
   margin: 0.5em 0.2em 0.3em;
@@ -340,7 +335,6 @@ section.hh > header {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-section.hhTwH::after,
 section.hh::after {
   text-align: right;
   padding-bottom: 1.4em;
