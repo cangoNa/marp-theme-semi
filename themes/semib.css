@@ -82,7 +82,7 @@ h6 {
 ul > li,
 ol > li {
   text-align:left;
-  margin: 0.3em 0 0;
+  margin: 0.1em 0 0;
 }
 ul > li > p,
 ol > li > p {
@@ -95,18 +95,18 @@ code {
   font-size: 20px;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
-  padding: 0.1em 0.1em;
+  padding: 0.05em 0.1em;
   vertical-align: baseline;
   line-height: 1.2;
   overflow: visible;
-  border: solid;
+  border: solid 1.5px;
 }
 
 pre {
   text-align: left;
   display: block;
   overflow: visible;
-  margin: 5px 1px;
+  margin: 0.1em 0em;
   border: solid;
 }
 pre::part(auto-scaling) {
@@ -166,7 +166,7 @@ table {
   display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
-  margin: 0.5em 0.5em 0;
+  margin: 0.0em 0.3em 0;
   font-size: 28px;
 }
 
@@ -180,7 +180,7 @@ table thead > tbody {
 
 table th,
 table td {
-  padding: 5px 5px;
+  padding: 3px 3px;
   border-width: 1px;
   border-style: solid;
 }
@@ -216,7 +216,7 @@ section h4 strong,
 section h5 strong {
   color: var(--color-highlight);
 }
-section pre > code {
+code {
   background: transparent;
 }
 section header,
@@ -431,7 +431,6 @@ pre > code {
   overflow: visible;
   letter-spacing: 0;
   box-sizing: border-box;
-  margin: 0;
   min-width: 100%;
 }
 /* 
