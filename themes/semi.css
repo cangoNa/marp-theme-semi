@@ -96,7 +96,7 @@ code {
   vertical-align: baseline;
   line-height: 1.2;
   overflow: visible;
-  border: solid;
+  border: solid 2px;
 }
 
 pre {
@@ -104,7 +104,7 @@ pre {
   display: block;
   overflow: visible;
   margin: 0.1em 0em;
-  border: solid;
+  border: solid 2px;
 }
 pre::part(auto-scaling) {
   max-height: calc(580px - 1em);
