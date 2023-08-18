@@ -107,7 +107,7 @@ pre {
   display: block;
   overflow: visible;
   margin: 0.1em 0em;
-  border: solid;
+  border: solid 1px;
 }
 pre::part(auto-scaling) {
   max-height: calc(580px - 1em);
