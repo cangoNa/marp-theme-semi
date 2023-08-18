@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semib
+theme: semi
 paginate: true
 math: katex
 # size: 16:9
@@ -68,6 +68,7 @@ int main(){
 - これはインライン → `test` 後ろに文字を記入
 
 > [2] [シンタックスハイライトに対応している言語一覧](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+> `test`
 
 ---
 
