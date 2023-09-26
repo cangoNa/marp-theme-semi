@@ -104,6 +104,7 @@ pre {
   display: block;
   overflow: visible;
   margin: 0.1em 0em;
+  padding: 0.2em;
   border: solid 2px;
 }
 pre::part(auto-scaling) {
