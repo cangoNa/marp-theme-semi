@@ -117,7 +117,7 @@ blockquote {
   font-size: 20px;
   position: absolute;
   margin-top: 5px;
-  bottom: 55px;
+  bottom: 5px;
   left: 28px;
   line-height: 1.2;
   display: block;
@@ -136,6 +136,9 @@ blockquote > ul > li::before {
 
 section:where(.lead) blockquote {
   bottom: 85px;
+}
+section:where(.withfooter) blockquote {
+  bottom: 55px;
 }
 
 section.lead blockquote > p{
