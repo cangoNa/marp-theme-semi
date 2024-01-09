@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semi
+theme: semib
 paginate: true
 math: katex
 # size: 16:9
@@ -121,7 +121,7 @@ int main(){
 > 一行開けると大丈夫
 
 ---
-<!-- _class: TwH -->
+<!-- _class: table-as-box mintable -->
 
 ##### 表は横並び可能で、見出しも消せる
 
