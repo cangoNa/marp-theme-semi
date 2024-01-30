@@ -369,6 +369,10 @@ ul ul {
   margin: 0 -0.7em 0;
 }
 
+ol li {
+  list-style-type: decimal;
+}
+
 section.lead h1 {
   color: #000;
   text-align: center;
