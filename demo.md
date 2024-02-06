@@ -41,6 +41,7 @@ size: 4:3
 > [1]  ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より``
 
 ---
+<!-- class: withfooter-->
 
 # コードブロック
 
