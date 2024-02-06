@@ -36,21 +36,11 @@ size: 4:3
 
 1. a
     1. あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        1. a
-
----
-
-- a
-  1. a
-
-<br>
-
 - 縦の空白は`<br>`、横の空白は&emsp;`&emsp;`、&ensp;`&ensp;`、&nbsp;`&nbsp;`で調整
 
 > [1]  ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より``
 
 ---
-<!-- class: withfooter-->
 
 # コードブロック
 

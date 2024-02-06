@@ -388,7 +388,8 @@ ul ul {
   margin: 0 -0.7em 0;
 }
 
-ol li ol {
+ol li ol,
+ul li ol {
   list-style-type: decimal;
 }
 
