@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: semi
+theme: semib
 paginate: true
 math: katex
 # size: 16:9
@@ -33,6 +33,10 @@ size: 4:3
       - さらに入れ子
         1. ナンバリングありの入れ子
 - 脚注は academic[1] を参考に
+
+1. a
+    1. あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+        1. a
 
 <br>
 
@@ -122,7 +126,7 @@ int main(){
 > 一行開けると大丈夫
 
 ---
-<!-- _class: TwH -->
+<!-- _class: table-as-box mintable -->
 
 ##### 表は横並び可能で、見出しも消せる
 

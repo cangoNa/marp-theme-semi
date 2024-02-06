@@ -177,6 +177,15 @@ table td {
   padding: 3px 3px;
   border-width: 1px;
   border-style: solid;
+  border-color: var(--color-foreground);
+}
+
+section.table-as-box table th,
+section.table-as-box table td {
+  padding: 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-background);
 }
 
 section {
@@ -221,10 +230,6 @@ section blockquote::before,
 section blockquote::after {
   color: var(--color-foreground);
 }
-section table th,
-section table td {
-  border-color: var(--color-foreground);
-}
 section table thead th {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -237,14 +242,28 @@ section.TwH table thead th {
   text-align: left;
 }
 
+section.table-as-box table thead th {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-weight: 200;
+  text-align: left;
+}
+
 section table tbody > tr:nth-child(odd) td,
 section table tbody > tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);
 }
+
 section > *:first-child,
 section > header:first-child + * {
   margin-top: 0;
 }
+
+section.table-as-box table tbody > tr td,
+section.table-as-box table tbody > tr th {
+  background: var(--color-background);
+}
+
 section:where(.lead) {
   display: flex;
   flex-flow: column nowrap;
@@ -348,6 +367,10 @@ ol ul,
 ul ul {
   font-size: 0.9em;
   margin: 0 -0.7em 0;
+}
+
+ol li {
+  list-style-type: decimal;
 }
 
 section.lead h1 {
