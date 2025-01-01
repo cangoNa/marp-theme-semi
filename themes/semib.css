@@ -23,56 +23,91 @@ p {
   text-align: left;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0.5em 0 0.3em;
-  color: #000;
-  text-align: left;
-}
-
-h1 strong,
-h2 strong,
-h3 strong,
-h4 strong,
-h5 strong,
-h6 strong {
-  font-weight: inherit;
-  color: #000;
-}
-
-h1::part(auto-scaling),
-h2::part(auto-scaling),
-h3::part(auto-scaling),
-h4::part(auto-scaling),
-h5::part(auto-scaling),
-h6::part(auto-scaling) {
-  max-height: 580px;
-}
-
 h1 {
   font-size: 1.57em;
   border-bottom: #6a7a7d solid 7px;
   padding-bottom: 0.1em;
+
+  margin: 0.5em 0 0.3em;
+  color: #000;
+  text-align: left;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 h2 {
   font-size: 1.46em;
+
+  margin: 0.5em 0 0.3em;
+  color: #000;
+  text-align: left;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 h3 {
   font-size: 1.35em;
+
+  margin: 0.5em 0 0.3em;
+  color: #000;
+  text-align: left;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 h4 {
   font-size: 1.25em;
+
+  margin: 0.5em 0 0.3em;
+  color: #000;
+  text-align: left;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 h5 {
   font-size: 1.14em;
+
+  margin: 0.5em 0 0.3em;
+  color: #000;
+  text-align: left;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 h6 {
@@ -83,6 +118,17 @@ h6 {
   margin: -0.1em 0.15em;
   padding: 0.1em 0.2em;
   vertical-align: baseline;
+
+  color: #000;
+
+  strong {
+    font-weight: inherit;
+    color: #000;
+  }
+
+  &::part(auto-scaling) {
+    max-height: 580px;
+  }
 }
 
 ul>li,
@@ -116,11 +162,22 @@ pre {
   margin: 0.1em 0em;
   padding: 0.2em;
   border: solid 2px;
+
+  &::part(auto-scaling) {
+    max-height: calc(580px - 1em);
+  }
+
+
+  code {
+    line-height: 1.2;
+    font-size: 20px;
+    overflow: visible;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+  }
 }
 
-pre::part(auto-scaling) {
-  max-height: calc(580px - 1em);
-}
 
 blockquote {
   padding: 0 0.5em;
@@ -131,50 +188,44 @@ blockquote {
   bottom: 5px;
   left: 28px;
   line-height: 1.2;
-}
 
-blockquote>ul {
-  list-style-type: none;
-  text-indent: -2.3em;
-  margin-left: 4px;
-}
+  ul {
+    list-style-type: none;
+    text-indent: -2.3em;
+    margin-left: 4px;
 
+    li::before {
+      content: "*";
+    }
 
-blockquote>ul>li::before {
-  content: "*";
-}
+  }
 
-section:where(.lead) blockquote {
-  bottom: 85px;
-}
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    position: absolute;
+  }
 
-section:where(.withfooter) blockquote {
-  bottom: 55px;
-}
+  >*:first-child {
+    margin-top: 0;
+  }
 
-section.lead blockquote>p {
-  text-align: left;
-}
-
-blockquote::after,
-blockquote::before {
-  content: "";
-  display: block;
-  font-family: "Times New Roman", serif;
-  font-weight: bold;
-  position: absolute;
-}
-
-blockquote>*:first-child {
-  margin-top: 0;
+  code {
+    line-height: 1.2;
+    font-size: 20px;
+    overflow: visible;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 100%;
+  }
 }
 
 mark {
   background: transparent;
-}
-
-section.mintable table {
-  font-size: 20px;
 }
 
 table {
@@ -183,31 +234,24 @@ table {
   border-collapse: collapse;
   margin: 0.0em 0.3em 0;
   font-size: 28px;
+
+  tbody {
+    text-align: left;
+  }
+
+  thead>tbody {
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: 3px 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-foreground);
+  }
 }
 
-table>tbody {
-  text-align: left;
-}
-
-table thead>tbody {
-  text-align: center;
-}
-
-table th,
-table td {
-  padding: 3px 3px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--color-foreground);
-}
-
-section.table-as-box table th,
-section.table-as-box table td {
-  padding: 3px 3px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--color-background);
-}
 
 section {
   background-color: var(--color-background);
@@ -231,111 +275,246 @@ section {
   --color-foreground: #000;
   --color-dimmed: #6a7a7d;
   --color-highlight: #800000;
-}
 
-section a,
-section mark {
-  color: var(--color-highlight);
-}
+  a,
+  mark {
+    color: var(--color-highlight);
+  }
 
-section h1 strong,
-section h2 strong,
-section h3 strong,
-section h4 strong,
-section h5 strong {
-  color: var(--color-highlight);
+  h1 strong,
+  h2 strong,
+  h3 strong,
+  h4 strong,
+  h5 strong {
+    color: var(--color-highlight);
+  }
+
+  header,
+  footer,
+  section::after,
+  blockquote::before,
+  blockquote::after {
+    color: var(--color-foreground);
+  }
+
+  table {
+    thead th {
+      background: var(--color-background);
+      color: var(--color-foreground);
+    }
+  }
+
+
+  >*:first-child,
+  >header:first-child+* {
+    margin-top: 0;
+  }
+
+
+  /* https://github.com/marp-team/marpit/issues/271 */
+  &::after {
+    top: 21px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000;
+    content: attr(data-marpit-pagination);
+  }
+
+
+  &:where(.lead) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /* stylelint-disable-next-line no-descending-specificity */
+
+
+    h1 {
+      color: #000;
+      text-align: center;
+      font-size: 54px;
+
+      strong {
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+
+
+    h2 {
+      color: #000;
+      text-align: center;
+
+      strong {
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+
+    h3 {
+      color: #000;
+      text-align: center;
+
+      strong {
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+
+    h4 {
+      color: #000;
+      text-align: center;
+
+      strong {
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+
+    h5 {
+      color: #000;
+      font-size: 24px;
+      text-align: center;
+
+      strong {
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    blockquote {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        text-align: left;
+      }
+    }
+
+    ul>li>p,
+    ol>li>p {
+      text-align: left;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+
+      tbody>tr:nth-child(odd) td,
+      tbody>tr:nth-child(odd) th {
+        background: var(--color-background-stripe, transparent);
+      }
+    }
+
+    blockquote {
+      bottom: 85px;
+
+      p {
+        text-align: left;
+      }
+
+    }
+  }
+
+
+  &:where(.withfooter) {
+    blockquote {
+      bottom: 55px;
+    }
+  }
+
+
+  &:where(withheader) {
+    padding-top: 60px;
+  }
+
+  &:where(table) {
+    font-size: 20px;
+  }
+
+  &:where(hh) {
+    padding-top: 120px;
+
+    h1 {
+      border-bottom: none;
+      font-size: 1.35em;
+      padding-top: 0.3em;
+    }
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    h3 {
+      font-size: 1.14em;
+    }
+
+    h4 {
+      font-size: 1.07em;
+    }
+
+    header {
+      font-size: 44px;
+      margin: 0.5em 0.2em 0.3em;
+      top: 40px;
+      padding-right: 40px;
+      line-height: 1.55;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    &::after {
+      text-align: right;
+      padding-bottom: 1.4em;
+      border-bottom: #6a7a7d solid 7px;
+      width: calc(100% - 70px);
+    }
+  }
+
+  &:where(table-as-box) {
+    table {
+      thead th {
+        background: var(--color-background);
+        color: var(--color-foreground);
+        font-weight: 200;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 3px 3px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--color-background);
+      }
+
+      tbody {
+
+        tr td,
+        tr th {
+          background: var(--color-background);
+        }
+      }
+    }
+  }
+
+
+  &:where(TwH) table thead th {
+    background: #f6f8fa;
+    color: var(--color-foreground);
+    font-weight: 200;
+    text-align: left;
+  }
+
 }
 
 code {
   background: transparent;
-}
-
-section header,
-section footer,
-section section::after,
-section blockquote::before,
-section blockquote::after {
-  color: var(--color-foreground);
-}
-
-section table thead th {
-  background: var(--color-background);
-  color: var(--color-foreground);
-}
-
-section.TwH table thead th {
-  background: #f6f8fa;
-  color: var(--color-foreground);
-  font-weight: 200;
-  text-align: left;
-}
-
-section.table-as-box table thead th {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-weight: 200;
-  text-align: left;
-}
-
-section table tbody>tr:nth-child(odd) td,
-section table tbody>tr:nth-child(odd) th {
-  background: var(--color-background-stripe, transparent);
-}
-
-section>*:first-child,
-section>header:first-child+* {
-  margin-top: 0;
-}
-
-section.table-as-box table tbody>tr td,
-section.table-as-box table tbody>tr th {
-  background: var(--color-background);
-}
-
-
-section>*:first-child,
-section>header:first-child+* {
-  margin-top: 0;
-}
-
-section:where(.lead) {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  /* stylelint-disable-next-line no-descending-specificity */
-}
-
-section:where(.lead) h1,
-section:where(.lead) h2,
-section:where(.lead) h3,
-section:where(.lead) h4,
-section:where(.lead) h5,
-section:where(.lead) h6 {
-  text-align: center;
-}
-
-section:where(.lead) p {
-  text-align: center;
-}
-
-section:where(.lead) blockquote>h1,
-section:where(.lead) blockquote>h2,
-section:where(.lead) blockquote>h3,
-section:where(.lead) blockquote>h4,
-section:where(.lead) blockquote>h5,
-section:where(.lead) blockquote>h6,
-section:where(.lead) blockquote>p {
-  text-align: left;
-}
-
-section:where(.lead) ul>li>p,
-section:where(.lead) ol>li>p {
-  text-align: left;
-}
-
-section:where(.lead) table {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 header {
@@ -356,57 +535,6 @@ footer {
   position: fixed;
 }
 
-section.withheader {
-  padding-top: 60px;
-}
-
-section.hh {
-  padding-top: 120px;
-}
-
-section.hh>h1 {
-  border-bottom: none;
-  font-size: 1.35em;
-  padding-top: 0.3em;
-}
-
-section.hh>h2 {
-  font-size: 1.25em;
-}
-
-section.hh>h3 {
-  font-size: 1.14em;
-}
-
-section.hh>h4 {
-  font-size: 1.07em;
-}
-
-section.hh>header {
-  font-size: 44px;
-  margin: 0.5em 0.2em 0.3em;
-  top: 40px;
-  padding-right: 40px;
-  line-height: 1.55;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-section.hh::after {
-  text-align: right;
-  padding-bottom: 1.4em;
-  border-bottom: #6a7a7d solid 7px;
-  width: calc(100% - 70px);
-}
-
-/* https://github.com/marp-team/marpit/issues/271 */
-section::after {
-  top: 21px;
-  font-weight: 700;
-  font-size: 30px;
-  color: #000;
-  content: attr(data-marpit-pagination);
-}
-
 ol ol,
 ul ol,
 ol ul,
@@ -420,91 +548,23 @@ ul li ol {
   list-style-type: decimal;
 }
 
-section.lead h1 {
-  color: #000;
-  text-align: center;
-  font-size: 54px;
-}
+img {
+  &[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
 
-section.lead h1 strong {
-  -webkit-text-stroke: 1px #000;
-}
 
-section.lead h2 {
-  color: #000;
-  text-align: center;
-}
+  &[alt~="left"] {
+    display: inline-block;
+    vertical-align: baseline;
+  }
 
-section.lead h2 strong {
-  -webkit-text-stroke: 1px #000;
-}
-
-section.lead h3 {
-  color: #000;
-  text-align: center;
-}
-
-section.lead h3 strong {
-  -webkit-text-stroke: 1px #000;
-}
-
-section.lead h4 {
-  color: #000;
-  text-align: center;
-}
-
-section.lead h4 strong {
-  -webkit-text-stroke: 1px #000;
-}
-
-section.lead h5 {
-  color: #000;
-  font-size: 24px;
-  ;
-  text-align: center;
-}
-
-section.lead h5 strong {
-  -webkit-text-stroke: 1px #000;
-}
-
-section.lead p {
-  text-align: center;
-}
-
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-
-img[alt~="left"] {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-img[alt~="right"] {
-  display: block;
-  position: fixed;
-  right: 0.8em;
-}
-
-blockquote>code {
-  line-height: 1.2;
-  font-size: 20px;
-  overflow: visible;
-  letter-spacing: 0;
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 100%;
-}
-
-pre>code {
-  line-height: 1.2;
-  font-size: 20px;
-  overflow: visible;
-  letter-spacing: 0;
-  box-sizing: border-box;
-  min-width: 100%;
+  &[alt~="right"] {
+    display: block;
+    position: fixed;
+    right: 0.8em;
+  }
 }
 
 /* 
