@@ -261,7 +261,9 @@ section {
   flex-direction: column;
   justify-content: flex-start; */
   /* display block だと中央ぞろえになった */
-  display: block;
+  /* display: block; */
+  display: inline-block;
+  vertical-align: middle;
 
   line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
@@ -430,15 +432,15 @@ section {
   }
 
 
-  &:where(withheader) {
+  &:where(.withheader) {
     padding-top: 60px;
   }
 
-  &:where(table) {
+  &:where(.mintable) {
     font-size: 20px;
   }
 
-  &:where(hh) {
+  &:where(.hh) {
     padding-top: 120px;
 
     h1 {
@@ -476,7 +478,7 @@ section {
     }
   }
 
-  &:where(table-as-box) {
+  &:where(.table-as-box) {
     table {
       thead th {
         background: var(--color-background);
@@ -504,7 +506,7 @@ section {
   }
 
 
-  &:where(TwH) table thead th {
+  &:where(.TwH) table thead th {
     background: #f6f8fa;
     color: var(--color-foreground);
     font-weight: 200;
