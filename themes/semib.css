@@ -202,8 +202,11 @@ section {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* display block だと中央ぞろえになった */
+  /* display: block; */
 
   line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
