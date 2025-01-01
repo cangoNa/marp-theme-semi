@@ -261,9 +261,8 @@ section {
   flex-direction: column;
   justify-content: flex-start; */
   /* display block だと中央ぞろえになった */
-  /* display: block; */
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  text-align: center;
 
   line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
