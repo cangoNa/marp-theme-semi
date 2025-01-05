@@ -239,7 +239,7 @@ table {
     text-align: left;
   }
 
-  thead>tbody {
+  thead {
     text-align: center;
   }
 
@@ -252,21 +252,25 @@ table {
   }
 }
 
-
 section {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
-  /* display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: flex-start; */
-  /* display block だと中央ぞろえになった */
+  justify-content: flex-start;*/
+  /*display block だと中央ぞろえになった*/
   display: block;
   text-align: center;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
 
   line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
-  padding: 40px 1.3em 0;
+  box-sizing: border-box;
+  padding: 40px 1.3em 100em;
   font-size: 28px;
 
   letter-spacing: 1.25px;
@@ -319,6 +323,12 @@ section {
     font-size: 30px;
     color: #000;
     content: attr(data-marpit-pagination);
+  }
+
+  &:where(.mintable) {
+    table {
+      font-size: 20px;
+    }
   }
 
 
@@ -433,10 +443,6 @@ section {
 
   &:where(.withheader) {
     padding-top: 60px;
-  }
-
-  &:where(.mintable) {
-    font-size: 20px;
   }
 
   &:where(.hh) {

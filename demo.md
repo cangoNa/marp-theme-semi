@@ -144,4 +144,11 @@ int main(){
 - 中央寄せなら`![w:100 center](./images/black.png)`![w:100 center](./images/black.png)
 
 ---
-<!-- _class: withheader -->
+<!-- _class: mintable -->
+
+# a
+
+|中央|A|
+|:---:|---|
+|aaaaa|b|
+|c|d|
