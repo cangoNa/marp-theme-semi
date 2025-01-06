@@ -19,19 +19,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import '~highlight.js/styles/sunburst';
 
+p {
+  text-align: left;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0.5em 0 0.3em;
+h5,
+h6 {
+  margin: 0.5em 0 0.1em;
   color: #000;
+  text-align: left;
 }
 h1 strong,
 h2 strong,
 h3 strong,
 h4 strong,
-h5 strong {
+h5 strong,
+h6 strong {
   font-weight: inherit;
   color: #000;
 }
@@ -40,30 +47,43 @@ h1::part(auto-scaling),
 h2::part(auto-scaling),
 h3::part(auto-scaling),
 h4::part(auto-scaling),
-h5::part(auto-scaling) {
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
   max-height: 580px;
 }
 
 h1{
-  font-size: 44px;
+  font-size: 1.57em;
+  padding-bottom: 0.1em;
   border-bottom:#6a7a7d solid 7px;
+  padding-bottom: 0.1em;
 }
 h2{
-  font-size: 41px
+  font-size: 1.46em;
 }
 h3{
-  font-size: 38px;
+  font-size: 1.35em;
 }
 h4{
-  font-size: 35px;
+  font-size: 1.25em;
 }
 h5{
-  font-size: 32px;
+  font-size: 1.14em;
+}
+h6 {
+  font-size: 1em;
+  text-align: center;
+  border: solid;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
 }
 
 ul > li,
 ol > li {
-  margin: 0.3em 0 0;
+  text-align:left;
+  margin: 0.1em 0 0;
 }
 ul > li > p,
 ol > li > p {
@@ -73,35 +93,61 @@ ol > li > p {
 code {
   display: inline-block;
   font-family: 'Source Code Pro', monospace;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
-  padding: 0.1em 0.2em;
+  padding: 0.05em 0.1em;
   vertical-align: baseline;
-  line-height: 1.3;
+  line-height: 1.2;
   overflow: visible;
-  border: solid;
+  border: solid 2px;
 }
 
 pre {
+  text-align: left;
   display: block;
   overflow: visible;
-  margin: 5px 1px;
-  border: solid;
+  margin: 0.1em 0em;
+  padding: 0.2em;
+  border: solid 2px;
 }
 pre::part(auto-scaling) {
   max-height: calc(580px - 1em);
 }
 
 blockquote {
-  padding: 0 1em;
-  max-width: 100%;
-  font-size: 24px;
+  padding: 0 0.5em;
+  max-width: 93%;
+  font-size: 20px;
   position: absolute;
   margin-top: 5px;
-  bottom: 60px;
-  line-height: 1.3;
+  bottom: 5px;
+  left: 28px;
+  line-height: 1.2;
 }
+
+blockquote > ul {
+  list-style-type: none;
+  text-indent: -2.3em;
+  margin-left: 4px;
+}
+
+
+blockquote > ul > li::before {
+  content: "*";
+}
+
+section:where(.lead) blockquote {
+  bottom: 85px;
+}
+section:where(.withfooter) blockquote {
+  bottom: 55px;
+}
+
+section.lead blockquote > p{
+  text-align: left;
+}
+
 blockquote::after, blockquote::before {
   content: "";
   display: block;
@@ -117,18 +163,40 @@ mark {
   background: transparent;
 }
 
+section.mintable table {
+  font-size: 20px;
+}
+
 table {
+  display: inline-block;
   border-spacing: 0;
   border-collapse: collapse;
-  margin: 1em 0 0;
+  margin: 0.0em 0.3em 0;
   font-size: 28px;
+}
+
+table > tbody{
+  text-align: left;
+}
+
+table thead > tbody {
+  text-align: center;
 }
 
 table th,
 table td {
-  padding: 5px 5px;
+  padding: 3px 3px;
   border-width: 1px;
   border-style: solid;
+  border-color: var(--color-foreground);
+}
+
+section.table-as-box table th,
+section.table-as-box table td {
+  padding: 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-background);
 }
 
 section {
@@ -136,15 +204,11 @@ section {
   color: var(--color-foreground);
   font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI", sans-serif;
   display: block;
+  text-align: center;
 
-  line-height: 1.3;
-  /* background-image: none; */
+  line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
-  padding: 40px 1.8em 0;
-  /* margin: 0.5em 0 0.3em; */
-  /* padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px; */
+  padding: 40px 1.3em 0;
   font-size: 28px;
 
   letter-spacing: 1.25px;
@@ -154,7 +218,6 @@ section {
   --color-foreground: #000;
   --color-dimmed: #6a7a7d;
   --color-highlight: #800000;
-  /* --color-highlight: blue; */
 }
 section a,
 section mark {
@@ -167,7 +230,7 @@ section h4 strong,
 section h5 strong {
   color: var(--color-highlight);
 }
-section pre > code {
+code {
   background: transparent;
 }
 section header,
@@ -177,19 +240,21 @@ section blockquote::before,
 section blockquote::after {
   color: var(--color-foreground);
 }
-section table th,
-section table td {
-  border-color: var(--color-foreground);
-}
+
 section table thead th {
   background: var(--color-background);
   color: var(--color-foreground);
 }
 
-section.h table thead th,
-section.withheaderh table thead th,
-section.hhh table thead th {
+section.TwH table thead th{
   background: #f6f8fa;
+  color: var(--color-foreground);
+  font-weight: 200;
+  text-align: left;
+}
+
+section.table-as-box table thead th {
+  background: var(--color-background);
   color: var(--color-foreground);
   font-weight: 200;
   text-align: left;
@@ -199,6 +264,18 @@ section table tbody > tr:nth-child(odd) td,
 section table tbody > tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);
 }
+
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+
+section.table-as-box table tbody > tr td,
+section.table-as-box table tbody > tr th {
+  background: var(--color-background);
+}
+
+
 section > *:first-child,
 section > header:first-child + * {
   margin-top: 0;
@@ -213,7 +290,8 @@ section:where(.lead) h1,
 section:where(.lead) h2,
 section:where(.lead) h3,
 section:where(.lead) h4,
-section:where(.lead) h5 {
+section:where(.lead) h5,
+section:where(.lead) h6 {
   text-align: center;
 }
 section:where(.lead) p {
@@ -224,6 +302,7 @@ section:where(.lead) blockquote > h2,
 section:where(.lead) blockquote > h3,
 section:where(.lead) blockquote > h4,
 section:where(.lead) blockquote > h5,
+section:where(.lead) blockquote > h6,
 section:where(.lead) blockquote > p {
   text-align: left;
 }
@@ -243,52 +322,42 @@ header {
   font-size: 28px;
   font-weight: 700;
   position: fixed;
+  text-align: left;
 }
 
 footer {
   font-size: 24px;
   text-align: left;
-  /* align-items: center; */
-  /* width: 100vw; */
   margin-top: 3px;
   font-weight: 700;
   position: fixed;
 }
 
-section.withheaderh,
 section.withheader {
   padding-top: 60px;
 }
 
-section.hhh,
 section.hh {
   padding-top: 120px;
 }
 
-section.hhh > h1,
 section.hh > h1 {
   border-bottom: none;
-  font-size: 38px;
+  font-size: 1.35em;
   padding-top: 0.3em;
 }
-section.hhh > h2,
 section.hh > h2{
-  font-size: 35px;
+  font-size: 1.25em;
 }
-section.hhh > h3,
 section.hh > h3{
-  font-size: 32px;
+  font-size: 1.14em;
 }
-section.hhh > h4,
 section.hh > h4{
-  font-size: 30px;
+  font-size: 1.07em;
 }
 
-section.hhh > header,
 section.hh > header {
   font-size: 44px;
-  /* width: calc(100vw - 115px); */
-  /* border-bottom:#6a7a7d solid 7px; */
   margin: 0.5em 0.2em 0.3em;
   top: 40px;
   padding-right: 40px;
@@ -296,22 +365,20 @@ section.hh > header {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-section.hhh::after,
 section.hh::after {
   text-align: right;
-  padding-bottom: 1.0em;
+  padding-bottom: 1.4em;
   border-bottom:#6a7a7d solid 7px;
   width: calc(100% - 70px);
 }
 
 /* https://github.com/marp-team/marpit/issues/271 */
 section::after {
-  top: 40px;
+  top: 21px;
   font-weight: 700;
   font-size: 30px;
   color:#000;
   content: attr(data-marpit-pagination);
-  /* content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total); */
 }
 
 ol ol,
@@ -320,6 +387,11 @@ ol ul,
 ul ul {
   font-size: 0.9em;
   margin: 0 -0.7em 0;
+}
+
+ol li ol,
+ul li ol {
+  list-style-type: decimal;
 }
 
 section.lead h1 {
@@ -365,10 +437,22 @@ section.lead p {
 
 img[alt~="center"] {
   display: block;
+  margin: 0 auto;
+}
+img[alt~="left"] {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 blockquote > code,
 pre > code {
+img[alt~="right"] {
+  display: block;
+  position: fixed;
+  right: 0.8em;
+}
+
+blockquote > code{
   line-height: 1.2;
   font-size:20px;
   overflow: visible;
@@ -378,6 +462,14 @@ pre > code {
   min-width: 100%;
 }
 
+pre > code {
+  line-height: 1.2;
+  font-size:20px;
+  overflow: visible;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  min-width: 100%;
+}
 /* 
 gaia, default のライセンス
 
