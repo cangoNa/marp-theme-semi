@@ -27,8 +27,8 @@
 |withheader|見出しとは別に、左上にヘッダをつける|
 |hh|head (as) headline <br> ヘッダをh1の代わりにする<br>semib で背景画像を挿入するときに使用|
 |TwH|Table without Header <br> 表を見出し無しにする|
-|withheaderTwH|withheader + TwH|
-|hhTwH|hh + TwH|
+|mintable|table のフォントサイズを 20px にする|
+|table-as-box|table の枠・背景色なし|
 
 ## 参考
 

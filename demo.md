@@ -3,8 +3,8 @@ marp: true
 theme: semib
 paginate: true
 math: katex
-size: 16:9
-# size: 4:3
+# size: 16:9
+size: 4:3
 ---
 
 <!-- _class: lead -->
@@ -19,6 +19,8 @@ size: 16:9
 **作成者**
 所属
 
+> block
+
 ---
 <!-- footer:  ○○研究室 -->
 
@@ -32,8 +34,8 @@ size: 16:9
         1. ナンバリングありの入れ子
 - 脚注は academic[1] を参考に
 
-<br>
-
+1. a
+    1. あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
 - 縦の空白は`<br>`、横の空白は&emsp;`&emsp;`、&ensp;`&ensp;`、&nbsp;`&nbsp;`で調整
 
 > [1]  ここに脚注 [academic のリンクはこちら](https://github.com/kaisugi/marp-theme-academic) ←　強調の色も academic より``
@@ -52,6 +54,9 @@ int main(){
 }
 ```
 
+```txt
+```
+
 - diff もできる
 
 ```diff
@@ -63,6 +68,7 @@ int main(){
 - これはインライン → `test` 後ろに文字を記入
 
 > [2] [シンタックスハイライトに対応している言語一覧](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+> `test`
 
 ---
 
@@ -92,6 +98,8 @@ int main(){
 - ## h2 でも
 - ##### **h5 でも可能で、もちろん強調も可能**
 
+> - 1&ensp;:  Hideki EIRAKU ：BitVisor/Code/Commit [92bf88]，SourceForge， 入手先 <https://sourceforge.net/p/bitvisor/code/ci/92bf883b3609c3a5de03c98a4d711d178a81e872/> (参照 2023-02-20) ．
+
 ---
 
 # その他いろいろ
@@ -113,7 +121,7 @@ int main(){
 > 一行開けると大丈夫
 
 ---
-<!-- _class: TwH -->
+<!-- _class: table-as-box mintable -->
 
 ##### 表は横並び可能で、見出しも消せる
 

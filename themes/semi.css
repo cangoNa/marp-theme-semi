@@ -79,7 +79,7 @@ h6 {
 ul > li,
 ol > li {
   text-align: left;
-  margin: 0.3em 0 0;
+  margin: 0.1em 0 0;
 }
 ul > li > p,
 ol > li > p {
@@ -92,19 +92,20 @@ code {
   font-size: 20px;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
-  padding: 0.1em 0.2em;
+  padding: 0.05em 0.2em;
   vertical-align: baseline;
   line-height: 1.2;
   overflow: visible;
-  border: solid;
+  border: solid 2px;
 }
 
 pre {
   text-align: left;
   display: block;
   overflow: visible;
-  margin: 5px 1px;
-  border: solid;
+  margin: 0.1em 0em;
+  padding: 0.2em;
+  border: solid 2px;
 }
 pre::part(auto-scaling) {
   max-height: calc(580px - 1em);
@@ -113,11 +114,12 @@ pre::part(auto-scaling) {
 
 blockquote {
   padding: 0 0.5em;
-  max-width: 100%;
+  max-width: 93%;
   font-size: 20px;
   position: absolute;
   margin-top: 5px;
-  bottom: 60px;
+  bottom: 5px;
+  left: 28px;
   line-height: 1.2;
   display: block;
 }
@@ -134,7 +136,10 @@ blockquote > ul > li::before {
 }
 
 section:where(.lead) blockquote {
-  bottom: 90px;
+  bottom: 85px;
+}
+section:where(.withfooter) blockquote {
+  bottom: 55px;
 }
 
 section.lead blockquote > p{
@@ -156,18 +161,31 @@ mark {
   background: transparent;
 }
 
+section.mintable table {
+  font-size: 20px;
+}
+
 table {
   display: inline-block;
-  margin: 0.5em 0.5em 0;
+  margin: 0.0em 0.3em 0;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 28px;
 }
 table th,
 table td {
-  padding: 5px 5px;
+  padding: 3px 3px;
   border-width: 1px;
   border-style: solid;
+  border-color: var(--color-foreground);
+}
+
+section.table-as-box table th,
+section.table-as-box table td {
+  padding: 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-background);
 }
 
 section {
@@ -179,7 +197,7 @@ section {
 
   line-height: 1.4;
   font-family: 'Noto Sans JP', sans-serif;
-  padding: 40px 1.8em 0;
+  padding: 40px 1.3em 0;
   font-size: 28px;
 
   letter-spacing: 1.25px;
@@ -202,7 +220,7 @@ section h5 strong,
 section h6 strong {
   color: var(--color-highlight);
 }
-section pre > code {
+code {
   background: transparent;
 }
 section header,
@@ -212,19 +230,20 @@ section blockquote::before,
 section blockquote::after {
   color: var(--color-foreground);
 }
-section table th,
-section table td {
-  border-color: var(--color-foreground);
-}
 section table thead th {
   background: var(--color-background);
   color: var(--color-foreground);
 }
 
-section.TwH table thead th,
-section.withheaderTwH table thead th,
-section.hhTwH table thead th {
+section.TwH table thead th {
   background: #f6f8fa;
+  color: var(--color-foreground);
+  font-weight: 200;
+  text-align: left;
+}
+
+section.table-as-box table thead th {
+  background: var(--color-background);
   color: var(--color-foreground);
   font-weight: 200;
   text-align: left;
@@ -234,10 +253,17 @@ section table tbody > tr:nth-child(odd) td,
 section table tbody > tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);
 }
+
 section > *:first-child,
 section > header:first-child + * {
   margin-top: 0;
 }
+
+section.table-as-box table tbody > tr td,
+section.table-as-box table tbody > tr th {
+  background: var(--color-background);
+}
+
 section:where(.lead) {
   display: flex;
   flex-flow: column nowrap;
@@ -290,35 +316,28 @@ footer {
   position: fixed;
 }
 
-section.withheaderTwH,
 section.withheader {
   padding-top: 70px;
 }
 
-section.hhTwH,
 section.hh {
   padding-top: 110px;
 }
 
-section.hhTwH > h1,
 section.hh > h1 {
   font-size: 1.35em;
   padding-top: 0.3em;
 }
-section.hhTwH > h2,
 section.hh > h2{
   font-size: 1.25em;
 }
-section.hhTwH > h3,
 section.hh > h3{
   font-size: 1.14em;
 }
-section.hhTwH > h4,
 section.hh > h4{
   font-size: 1.07em;
 }
 
-section.hhTwH > header,
 section.hh > header {
   font-size: 44px;
   margin: 0.5em 0.2em 0.3em;
@@ -328,7 +347,6 @@ section.hh > header {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-section.hhTwH::after,
 section.hh::after {
   text-align: right;
   width: calc(100% - 70px);
@@ -349,6 +367,11 @@ ol ul,
 ul ul {
   font-size: 0.9em;
   margin: 0 -0.7em 0;
+}
+
+ol li ol,
+ul li ol {
+  list-style-type: decimal;
 }
 
 section.lead h1 {
@@ -406,7 +429,7 @@ img[alt~="left"] {
 img[alt~="right"] {
   display: block;
   position: fixed;
-  right: 1.8em;
+  right: 0.8em;
 }
 
 blockquote > code{
