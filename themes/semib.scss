@@ -511,6 +511,15 @@ section {
     }
   }
 
+  &:where(.table-bottom) {
+    table {
+      th,
+      td {
+        vertical-align: bottom;
+      }
+    }
+  }
+
 
   &:where(.TwH) table thead th {
     background: #f6f8fa;

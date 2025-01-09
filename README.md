@@ -29,6 +29,7 @@
 |TwH|Table without Header <br> 表を見出し無しにする|
 |mintable|table のフォントサイズを 20px にする|
 |table-as-box|table の枠・背景色なし|
+|table-bottom|table を下揃えにする|
 
 ## 参考
 
