@@ -565,6 +565,44 @@ ul li ol {
   list-style-type: decimal;
 }
 
+ul.procon {
+  li[data-marker="+"] {
+    list-style: none;
+    position: relative;
+    padding-left: 2em;
+  }
+  li[data-marker="+"]::before {
+    content: ":white_check_mark:";
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #008800;
+  }
+
+  li[data-marker="-"] {
+    list-style: none;
+    position: relative;
+    padding-left: 2em;
+  }
+  li[data-marker="-"]::before {
+    content: ":x:";
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #cc0000;
+  }
+
+  /* * はデフォルトの黒点（disc） */
+  li[data-marker="*"] {
+    list-style-type: disc;
+    position: static;
+    padding-left: 0.9em;
+  }
+  li[data-marker="*"]::before {
+    content: none;
+  }
+}
+
 img {
   &[alt~="center"] {
     display: block;
