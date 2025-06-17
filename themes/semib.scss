@@ -567,39 +567,27 @@ ul li ol {
 
 ul.procon {
   li[data-marker="+"] {
-    list-style: none;
+    list-style: "✅";
     position: relative;
-    padding-left: 2em;
+    padding-left: 1em;
   }
   li[data-marker="+"]::before {
-    content: ":white_check_mark:";
+    content: "";
     position: absolute;
-    left: 0;
-    font-size: 1.2em;
-    color: #008800;
+    left: -1em;
+    font-size: 0.9em;
   }
 
   li[data-marker="-"] {
-    list-style: none;
+    list-style: "❌";
     position: relative;
-    padding-left: 2em;
+    padding-left: 1em;
   }
   li[data-marker="-"]::before {
-    content: ":x:";
+    content: "";
     position: absolute;
-    left: 0;
-    font-size: 1.2em;
-    color: #cc0000;
-  }
-
-  /* * はデフォルトの黒点（disc） */
-  li[data-marker="*"] {
-    list-style-type: disc;
-    position: static;
-    padding-left: 0.9em;
-  }
-  li[data-marker="*"]::before {
-    content: none;
+    left: -1em;
+    font-size: 0.9em;
   }
 }
 
