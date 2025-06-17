@@ -513,6 +513,7 @@ section {
 
   &:where(.table-bottom) {
     table {
+
       th,
       td {
         vertical-align: bottom;
@@ -565,29 +566,31 @@ ul li ol {
   list-style-type: decimal;
 }
 
-ul.procon {
-  li[data-marker="+"] {
-    list-style: "✅";
+.procon ul {
+  li.pros {
+    list-style: "";
     position: relative;
-    padding-left: 1em;
-  }
-  li[data-marker="+"]::before {
-    content: "";
-    position: absolute;
-    left: -1em;
-    font-size: 0.9em;
   }
 
-  li[data-marker="-"] {
-    list-style: "❌";
-    position: relative;
-    padding-left: 1em;
-  }
-  li[data-marker="-"]::before {
-    content: "";
+  li.pros::before {
+    content: "✅";
     position: absolute;
-    left: -1em;
-    font-size: 0.9em;
+    left: -1.8em;
+    top: 0.3em;
+    font-size: 0.8em;
+  }
+
+  li.cons {
+    list-style: "";
+    position: relative;
+  }
+
+  li.cons::before {
+    content: "❌";
+    position: absolute;
+    left: -1.8em;
+    top: 0.3em;
+    font-size: 0.8em;
   }
 }
 
